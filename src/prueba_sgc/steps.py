@@ -21,15 +21,26 @@ class ExtractTransformLoad():
         
         files = cfg["archivo"]
 
-        # for file in files:
-        #     archivo = self.getSQLPath() + file
-        #     print(archivo)
-        #     # helper.ejecutar_archivo(archivo, cfg)
+        for file in files:
+            archivo = self.getSQLPath() + file
+            print(archivo)
+            # helper.ejecutar_archivo(archivo, cfg)
 
-        with open(files, 'r') as sql_file:
+            with open(archivo, 'r') as sql_file:
                 sql_query = sql_file.read()
                 cursor.execute(sql_query)
-                connection.commit()
+                # connection.commit()
+                results = cursor.fetchall()
+                
+                # Obtener los nombres de las columnas
+                column_names = [desc[0] for desc in cursor.description]
+        
+        # Convertir los resultados a un DataFrame de pandas
+        df = pd.DataFrame(results, columns=column_names)
+
+        print(df.head())
+
+
 
     def getFolderPath(self):
         return os.path.join(os.path.dirname(__file__), 'static', '')
@@ -66,7 +77,13 @@ class ExtractTransformLoad():
                 database=cfg["credenciales"]["database"]
             )
             cursor = connection.cursor()
-            print("Conexión a PostgreSQL exitosa")
+            cursor.execute("SET client_encoding TO 'UTF8';")
+            print("Codificación del cliente configurada a UTF8")
+
+            # Ejemplo de ejecución de una consulta
+            cursor.execute("SELECT version();")
+            record = cursor.fetchone()
+            print(f"Versión de PostgreSQL: {record}")
             return connection, cursor
         except (Exception, psycopg2.Error) as error:
             print("Error al conectar a PostgreSQL", error)

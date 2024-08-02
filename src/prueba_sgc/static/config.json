@@ -1,13 +1,13 @@
 {
     "ExtractTransformLoad": {
         "primera": "Hola",
-        "archivo": ["archivo.sql"],
         "credenciales": {
             "user": "postgres",
             "password": "poderoso7",
-            "host": "127.0.0.1",
+            "host": "localhost",
             "port": "5432",
-            "database": "pruebas_cali"
-        }
+            "database": "connect"
+        },
+        "archivo": ["001_clientes.sql"]
     }
 }
