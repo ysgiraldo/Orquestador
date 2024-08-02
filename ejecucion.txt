@@ -1,7 +1,10 @@
 Pasos para la ejecucion de este Orquestador
 
 1. Crear un ambiente virtual
-    python -m venv .venv
+    C:\Users\usuario\AppData\Local\Programs\Python\Python39\python.exe -m venv .venv
+
+    Actualizar pip del ambiente
+    C:\Users\usuario\Documents\GIT\orquestador\.venv\Scripts\python.exe -m pip install --upgrade pip
 
 2. Activar el ambiente virtual
     .venv/Script/activate
