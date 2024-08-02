@@ -6,4 +6,4 @@ En el tiempo puede ser muy probable que los autores de los proyectos analíticos
 
 Aquí se podrá encontrar el desarrollo de un modelo de orquestador, el cual ayudará en ese mantenimiento.
 
-Se desarrolló por medio de python version 3.12.3
+Se desarrolló por medio de python version 3.9.12
