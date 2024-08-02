@@ -3,7 +3,7 @@
         "primera": "Hola",
         "credenciales": {
             "user": "postgres",
-            "password": "poderoso7",
+            "password": "",
             "host": "localhost",
             "port": "5432",
             "database": "connect"

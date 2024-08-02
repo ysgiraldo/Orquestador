@@ -1,3 +1,5 @@
 Notas de este proyecto Orquestador
 
-S
+
+
+Como es una prueba de conexión y construcción de un orquestador no afecta mucho el tema de contraseñas.
