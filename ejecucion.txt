@@ -1,0 +1,13 @@
+Pasos para la ejecucion de este Orquestador
+
+1. Crear un ambiente virtual
+    python -m venv .venv
+
+2. Activar el ambiente virtual
+    .venv/Script/activate
+
+3. Descargar las librerías y las versiones que utiliza este proyecto
+    pip install -r requirements.txt
+
+4. Para ejecutar todo el proceso:
+    python .\src\prueba_sgc\ejecucion.py

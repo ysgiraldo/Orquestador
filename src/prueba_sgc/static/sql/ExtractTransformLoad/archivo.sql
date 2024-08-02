@@ -1,0 +1,1 @@
+select * from pruebas_cali.barrios
