@@ -10,11 +10,11 @@
 -----------------------------------------------------------------------------
 """ 
 
-from steps import ExtractTransformLoad
+from steps import ExtractTransformLoad, Prueba
 import os
 
 steps = [
-    ExtractTransformLoad()
+    ExtractTransformLoad(), Prueba()
 ]
 
 def main():
@@ -22,7 +22,8 @@ def main():
         "Orq 2 prueba tecnica ysgirald" \
         , steps
     )
-    orquestador[1][0].ejecutar()
+    for step in orquestador[1]:
+        step.ejecutar()
 
 if __name__ == "__main__":
     main()

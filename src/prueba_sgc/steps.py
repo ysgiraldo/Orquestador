@@ -89,3 +89,7 @@ class ExtractTransformLoad():
             print("Error al conectar a PostgreSQL", error)
             return None, None
 
+class Prueba():
+    def ejecutar(self):
+        print("Esta es una prueba de la clase Prueba")
+        
