@@ -1,4 +1,8 @@
 {
+    "global":{
+        "database":"connect",
+        "zona": ""
+    },
     "ExtractTransformLoad": {
         "primera": "Hola",
         "credenciales": {
