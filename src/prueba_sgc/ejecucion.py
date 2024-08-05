@@ -12,6 +12,7 @@
 
 from steps import ExtractTransformLoad, Prueba
 import os
+from funciones import Step
 
 steps = [
     ExtractTransformLoad(), Prueba()
