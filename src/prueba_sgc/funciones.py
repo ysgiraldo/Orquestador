@@ -2,8 +2,20 @@ import os
 import json
 import psycopg2
 
-# Resumen
+# Funciones
+
+class PayloadManager:
+    def __init__(self):
+        self.payload = {}
+
+payload_manager = PayloadManager()
 class Step:
+    def setPayload(self, payload):
+        payload_manager.payload = payload
+    
+    def getPayload(self):
+        return payload_manager.payload
+    
     def getFolderPath(self):
         return os.path.join(os.path.dirname(__file__), 'static', '')
 
